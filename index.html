@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Contact Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" novalidate>
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" />
+        <small class="error-message" id="nameError"></small>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" />
+        <small class="error-message" id="emailError"></small>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" />
+        <small class="error-message" id="phoneError"></small>
+      </div>
+
+      <!-- Subject -->
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject">
+          <option value="">-- Select a Subject --</option>
+          <option value="support">Support</option>
+          <option value="feedback">Feedback</option>
+          <option value="inquiry">General Inquiry</option>
+        </select>
+        <small class="error-message" id="subjectError"></small>
+      </div>
+
+      <!-- Preferred Contact Method -->
+      <div class="form-group">
+        <label>Preferred Contact Method:</label>
+        <label><input type="radio" name="contactMethod" value="email" /> Email</label>
+        <label><input type="radio" name="contactMethod" value="phone" /> Phone</label>
+        <small class="error-message" id="contactMethodError"></small>
+      </div>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label for="date">Preferred Contact Date:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" maxlength="300"></textarea>
+        <div class="char-counter"><span id="charCount">0</span>/300</div>
+        <small class="error-message" id="messageError"></small>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="form-group">
+        <label><input type="checkbox" id="subscribe" name="subscribe" /> Subscribe to newsletter</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+      <p class="success-message" id="successMessage">✅ Form submitted successfully!</p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
